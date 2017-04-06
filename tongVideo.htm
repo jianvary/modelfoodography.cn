@@ -1,0 +1,51 @@
+<div class="cont collection">
+	<div class="container">
+		<div class="row">
+			<h3>
+				<i>FOODOGRAPHY STUDIO</i>
+			</h3>
+			<h4>
+				#FOODOGRAPHY VIDEO#
+			</h4>
+			<h5>
+				视频制作
+			</h5>
+		</div>
+		<div class="row bigImg">
+			{dede:arclist typeid="15" type="image." flag='h' row='1'}
+				<a href="[field:arcurl /]" title="[field:title function='htmlspecialchars(@me)'/]">
+                    <img src="[field:picname/]" />
+                </a>
+			{/dede:arclist}
+		</div>
+		<div class="row smallImg">
+			{dede:arclist typeid="15" type="image." row="6" noflag='h'}
+	        <div class="col-sm-4">
+	            <ul>
+	                <li>
+	                    <a href="[field:arcurl /]" title="[field:title function='htmlspecialchars(@me)'/]">
+                        	<img src="[field:picname/]" />
+                    	</a>
+	                    <p>
+	                        <a href="[field:arcurl /]" title="[field:title function='htmlspecialchars(@me)'/]">
+                            	[field:title /]
+                        	</a>
+	                    </p>
+	                </li>
+	            </ul>
+	        </div>
+	        {/dede:arclist}
+		</div>
+		<div class="row moretitle">
+            <ul>
+                <li></li><li></li><li></li><li></li>
+            </ul>
+            <p class="left">
+                <a href="#">
+                    查看更多作品
+                </a>
+            </p>
+            <p class="right">+</p>
+		</div>
+	</div>
+</div>

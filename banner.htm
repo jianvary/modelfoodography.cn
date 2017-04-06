@@ -1,0 +1,46 @@
+
+<link href="/templets/pc/css/banner.css" rel="stylesheet" type="text/css">
+<script src="/templets/pc/js/owl.carousel.js"></script>
+<script>
+    jQuery(document).ready(function($) {
+
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            animateOut: 'fadeOut',
+            items: 1,
+            nav: true,
+            lazyLoad: true,
+            loop: true,
+            autoHeight: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            smartSpeed: 450
+        });
+    });
+    $.ajax({
+        url: '/templets/pc/js/demo.json',
+        dataType: 'json',
+        success: function(data) {
+            var content = '';
+            for (i in data.owl) {
+                content += data.owl[i].item;
+            }
+            owl.trigger('insertContent.owl', content);
+        }
+    });
+</script>
+
+<div class="cont bannertu"> 
+    <div class="owl-carousel">
+        {dede:arclist type='image.' typeid='12' }
+        <img class="owl-lazy" data-src="[field:litpic/]" alt="[field:title function='html2text(@me)'/]">
+        {/dede:arclist} 
+        {dede:arclist type='image.' typeid='13'}
+        <img class="owl-lazy" data-src="[field:litpic/]" alt="[field:title function='html2text(@me)'/]">
+        {/dede:arclist} 
+        {dede:arclist type='image.' typeid='14'}
+        <img class="owl-lazy" data-src="[field:litpic/]" alt="[field:title function='html2text(@me)'/]">
+        {/dede:arclist} 
+    </div>
+</div>
+

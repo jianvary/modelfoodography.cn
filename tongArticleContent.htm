@@ -1,0 +1,55 @@
+<div class="cont marginTopBottom20">
+    <div class="container">
+        <div class="contentPage">
+            <div class="left">
+                <div class="nav">
+                    <p> 
+                        {dede:field name='position'/}
+                    </p>
+                </div>
+                <div class="jiaThis">
+                    {dede:include filename="tongJiaThis.htm"/}
+                </div>
+                <div class="title">
+                    <p>
+                        {dede:field.title/}
+                    </p>
+                </div>
+                <div class="time"> 
+                    <ul>
+                      <li>时间:</li>
+                      <li>{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}&nbsp;</li>
+                      <li>来源:</li>
+                      <li><a href="/">{dede:field.source/}</a>&nbsp;</li>
+                      <li>作者:</li>
+                      <li><a href="/">{dede:field.writer/}</a>&nbsp;</li>
+                      <li>点击:</li> 
+                      <li>
+                        <script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script>
+                        次
+                      </li>
+                    </ul>
+                </div>
+                <div class="content">
+                    {dede:field.body/}
+                </div>
+            </div>
+            <div class="right">
+                <div class="nav">
+                    <p>
+                        今日热点
+                    </p>
+                </div>
+                <div class="title">
+                    <ul>
+                        {dede:arclist row='8'  typeid='2,3,23,33,34,36'  titlelen='48'}
+                            <li>
+                                <a href="[field:arcurl/]">[field:title/]</a>
+                            </li>
+                        {/dede:arclist}                     
+                    </ul>
+                </div>
+            </div>
+        </div><!-- contentPage -->
+    </div>
+</div>

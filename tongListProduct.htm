@@ -1,0 +1,29 @@
+<div class="cont collection">
+	<div class="container">
+		<div class="row smallImg">
+			{dede:list pagesize='9' titlelen="36"}
+	        <div class="col-sm-4">
+	            <ul>
+	                <li>
+	                    <a href="[field:arcurl /]" title="[field:title function='htmlspecialchars(@me)'/]">
+                        	<img src="[field:picname/]" />
+                    	</a>
+	                    <p>
+	                        <a href="[field:arcurl /]" title="[field:title function='htmlspecialchars(@me)'/]">
+                            	[field:title /]
+                        	</a>
+	                    </p>
+	                </li>
+	            </ul>
+	        </div>
+	        {/dede:list}
+		</div>
+		<div class="row">
+        	<div class="pageCon"> 
+               <ul class="pagelist">
+                {dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="5"/}
+               </ul>
+      		</div>
+		</div>
+	</div>
+</div>

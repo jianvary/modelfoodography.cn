@@ -1,0 +1,43 @@
+<div class="row">
+			<div class="col-sm-9">
+            	<ul class="all">
+            		{dede:list pagesize='10'}
+            		<li> 
+        				[field:array runphp='yes']@me = (empty(@me['litpic']) ? "" : "<a href='{@me['arcurl']}' >
+        				<img src='{@me['litpic']}'/></a>"); 
+        				[/field:array]
+            			<p>
+             				[<b>[field:typelink/]</b>] 
+             				<a href="[field:arcurl/]" >[field:title/]</a> <br>
+             				<span class="info"> 
+             					<small>日期：</small>[field:pubdate function="GetDateTimeMK(@me)"/] 
+             					<small>点击：</small>[field:click/]  
+             				</span><br>
+             				<span class="intro"> [field:description/]... </span>
+             			</p>
+            		</li>
+            		{/dede:list}
+           		</ul>
+                <div class="pages">
+                	<div class="pageCon">
+		               <ul class="pagelist">
+		                {dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="5"/}
+		               </ul>
+              		</div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="nav">
+                    推荐热点
+                </div>
+                <div class="title">
+                    <ul>
+                        {dede:arclist row='8'  typeid='2,3,4,20,21,33,36'  titlelen='48'}
+                            <li>
+                                <a href="[field:arcurl/]">[field:title/]</a>
+                            <li>
+                        {/dede:arclist}                     
+                    </ul>
+                </div>
+            </div>
+		</div>

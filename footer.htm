@@ -1,0 +1,157 @@
+<div class="cont foot marginTop30">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3">
+				<dl class="dongTai">
+					<dt>
+						<a href="#">
+							公司动态
+						</a>
+					</dt>
+					<dd>
+						<a href="#">
+							品牌建设要努力成为客户第一选择
+						</a>
+					</dd>
+					<dd>
+						<a href="#">
+							资深设计师自述
+						</a>
+					</dd>
+					<dd>
+						<a href="#">
+							未来设计趋势动向
+						</a>
+					</dd>
+					<dd>
+						<a href="#">
+							花匠标志设计流程
+						</a>
+					</dd>
+					<dd>
+						<a href="#">
+							未来设计趋势动向
+						</a>
+					</dd>
+					<dd>
+						<a href="#">
+							花匠标志设计流程
+						</a>
+					</dd>
+				</dl>
+			</div>
+			<div class="col-sm-3">
+				<dl class="attribute">
+					<dt>
+						<a href="#">
+							标签
+						</a>
+					</dt>
+					<dd>
+						<a href="#">
+							美食摄影
+						</a>
+					</dd>
+					<dd>
+						<a href="#">
+							产品摄影
+						</a>
+					</dd>
+					<dd>
+						<a href="#">
+							静物摄影
+						</a>
+					</dd>
+					<dd>
+						<a href="#">
+							商业商业
+						</a>
+					</dd>
+				</dl>
+			</div>
+			<div class="col-sm-3">
+				<dl class="active">
+					<dt>
+						FOODOGRAPHY
+					</dt>
+					<dd>
+						FOODOGRAPHY | 食摄集优势
+					</dd>
+					<dd>
+						以营销为导向，以差异化为目标，竭力使每一张照片传播更有价值
+					</dd>
+				</dl>
+			</div>
+			<div class="col-sm-3">
+				<dl class="contact">
+					<dt>
+						CONTACT
+					</dt>
+					<h6>
+						Address
+					</h6>
+					<dd class="address">
+					</dd>
+					<dd>
+						广东省广州市海珠区燕岗街1号一号创意园
+					</dd>
+					<dd class="telphoto">
+						Telphoto
+					</dd>
+					<dd>
+						150 1311 7708
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="cont footBottom">
+	<div class="container">
+		<div class="row">
+			copyrights 2013-2018. foodography co.,ltd. all rights reserved. 
+			<a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备16129067号-6</a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+$(function() {
+    $.fn.toTop = function(options) {
+        var defaults = {
+            showHeight: 150,
+            speed: 1000
+        };
+        var options = $.extend(defaults, options);
+        $("body").prepend("<div id='totop'><a></a></div>");
+        var $toTop = $(this);
+        var $top = $("#totop");
+        var $ta = $("#totop a");
+        $toTop.scroll(function() {
+            var scrolltop = $(this).scrollTop();
+            if (scrolltop >= options.showHeight) {
+                $top.show()
+            } else {
+                $top.hide()
+            }
+        });
+        $ta.hover(function() {
+            $(this).addClass("cur")
+        }, function() {
+            $(this).removeClass("cur")
+        });
+        $top.click(function() {
+            $("html,body").animate({
+                scrollTop: 0
+            }, options.speed)
+        })
+    }
+});
+$(function() {
+    $(window).toTop({
+        showHeight: 100,
+        speed: 500
+    })
+});
+</script>

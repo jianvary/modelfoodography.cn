@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{dede:field.seotitle /}{dede:field.title/}</title>
+    <meta name="keywords" content="{dede:field name='keywords'/}" />
+    <meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+    <link href="/templets/pc/css/main.css" rel="stylesheet" type="text/css">
+    <link href="/templets/pc/css/sub.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+{dede:include filename="head.htm"/}
+
+{dede:include filename="banner.htm"/}
+
+<div class="cont listActicleTitle">
+	<div class="container">
+		<div class="row">
+			{dede:field name='position'/}
+		</div>
+	</div>
+</div>
+
+<div class="cont listActicleBody marginTop20">
+	<div class="container">
+		<div class="row">
+			{dede:field.content/}
+		</div>
+	</div>
+</div>
+
+{dede:include filename="liuyanTitle.htm"/}
+
+{dede:include filename="liuyan.htm"/}
+  
+{dede:include filename="footer.htm"/}
+</body>  
+</html>
+

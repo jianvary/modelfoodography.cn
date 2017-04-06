@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{dede:field.seotitle /}{dede:field.title/}</title>
+    <meta name="keywords" content="{dede:field name='keywords'/}" />
+    <meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+    <link href="/templets/pc/css/main.css" rel="stylesheet" type="text/css">
+    <link href="/templets/pc/css/sub.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+{dede:include filename="head.htm"/}
+
+{dede:include filename="banner.htm"/}
+
+<div class="cont listActicleTitle">
+	<div class="container">
+		<div class="row">
+			{dede:field name='position'/}
+		</div>
+	</div>
+</div>
+
+<div class="cont listNews marginTopBottom20">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-9">
+				{dede:list pagesize='10' titlelen="36"}
+				<div class="box">
+					[field:array runphp='yes']@me = (empty(@me['litpic']) ? "" : "<a href='{@me['arcurl']}' >
+        				<img src='{@me['litpic']}'/></a>"); 
+        			[/field:array]
+					<ul>
+						<li class="attribute">
+							[<b>[field:typelink/]</b>] 
+						</li>
+						<li class="title">
+							<a href="[field:arcurl/]" title="[field:title function='htmlspecialchars(@me)'/]">
+								[field:title/]
+							</a> 
+						</li>
+						<li class="date">
+							日期：[field:pubdate function="GetDateTimeMK(@me)"/] &nbsp;
+							点击：[field:click/] 
+						</li>
+						<li class="desc">
+							[field:description/]...
+						</li>
+					</ul>
+				</div>
+				{/dede:list}
+            	<div class="pageCon">
+	               <ul class="pagelist">
+	                {dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="5"/}
+	               </ul>
+          		</div>	
+			</div>
+			<div class="col-sm-3 tuijian"> 
+				<h3>
+					推荐热点
+				</h3>
+				<ol>
+					{dede:arclist row='8'  typeid='2,3,4,20,21,33,36'  titlelen='48'}
+                    <li>
+                        <a href="[field:arcurl/]" title="[field:title function='htmlspecialchars(@me)'/]">
+                        	[field:title/]
+                        </a>
+                    <li>
+                    {/dede:arclist}     
+				</ol>
+			</div>
+		</div>
+	</div>
+</div>
+
+{dede:include filename="liuyanTitle.htm"/}
+
+{dede:include filename="liuyan.htm"/}
+  
+{dede:include filename="footer.htm"/}
+</body>  
+</html>
+

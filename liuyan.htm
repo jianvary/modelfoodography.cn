@@ -1,0 +1,33 @@
+
+<link href="/templets/pc/css/message.css" rel="stylesheet" type="text/css">
+<script src="/templets/pc/js/message.js"></script>
+<div class="cont liuyan">
+	<div class="container">
+		<div class="col-sm-7">
+			<form method="post" action="/plus/guestbook1.php" name="form1">
+				<input type="hidden" name="action" value="save" />
+				<div class="liutitle">
+					<p class="liufonta">
+						<a name="message">
+							SEND US MESSAGE
+						</a>
+					</p>
+					<p class="liufontb">填写您的需求，公司会即時与您联系</p>
+				</div>
+				<input type="text" class="liuname" name="uname" value="姓名  *" onFocus="if(this.value=='姓名  *'){this.value='';}" onBlur="if(this.value==''){this.value='姓名  *';}" />
+				<div class="sex">
+					<input type="radio" name="img" value="男" checked="checked" />
+					先生
+					<input type="radio" name="img" value="女" />
+					女士
+				</div>
+				<input type="text" class="liuname" name="qq" value="回访电话  *" onFocus="if(this.value=='回访电话  *'){this.value='';}" onBlur="if(this.value==''){this.value='回访电话  *';}" />
+                    <input type="text" class="liuguest" name="msg" value="请填写你的合作需求" onFocus="if(this.value=='请填写你的合作需求'){this.value='';}" onBlur="if(this.value==''){this.value='请填写你的合作需求';}" />  
+                <input type="submit" class="submit" name="submit" value="点击提交" />
+			</form>
+		</div>
+		<div class="col-sm-5">
+			{dede:include filename="message.htm" /}
+		</div>
+	</div>
+</div>
